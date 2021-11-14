@@ -8,7 +8,9 @@
 // Documentation:
 //   https://developers.google.com/tasks/
 
-#if SWIFT_PACKAGE || GTLR_USE_MODULAR_IMPORT
+#ifdef SWIFT_PACKAGE
+  @import GoogleAPIClientForRESTCore;
+#elif GTLR_USE_MODULAR_IMPORT
   @import GoogleAPIClientForRESTCore;
 #elif GTLR_BUILT_AS_FRAMEWORK
   #import "GTLR/GTLRObject.h"
